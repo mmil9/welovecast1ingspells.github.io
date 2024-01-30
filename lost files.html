@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lost files</title>
+    <link rel="stylesheet" href="1nez.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        
+            font-family: Arial, sans-serif;
+        }
+
+        #slideshow-container {
+            position:static;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        #dugme:hover {
+            color: whi;
+            font-family: Nobel;
+            font-style: normal;
+            cursor: url(https://d2kq0urxkarztv.cloudfront.net/5d17475e84e3710d75db2cf6/upload-a365dda8-fc0b-4e4e-a25e-df058e2ef86e.png), pointer;
+            cursor: -webkit-image-set(
+                url(https://d2kq0urxkarztv.cloudfront.net/5d17475e84e3710d75db2cf6/upload-a365dda8-fc0b-4e4e-a25e-df058e2ef86e.png?w=29) 1x,
+                url(https://d2kq0urxkarztv.cloudfront.net/5d17475e84e3710d75db2cf6/upload-a365dda8-fc0b-4e4e-a25e-df058e2ef86e.png) 2x
+            ), pointer;
+        }
+
+        .slide {
+            display: none;
+            width: 100%;
+            height: 100%;
+            position: contain;
+            object-fit: contain; /* Prilagođava sliku tako da pokriva čitav prostor */
+            transition: opacity 1s ease-in-out;
+            background-size: contain;
+        }
+        
+
+        .popup-sticker {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            display: none;
+            z-index: 1;
+        }
+
+        .popup-sticker img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="slideshow-container">
+        <div class="slide"><img src="3.jpg" alt="Slide 1"></div>
+        <div class="slide"><img src="suma.jpg" alt="Slide 2"></div>
+        <div class="slide"><img src="klupa.jpg" alt="Slide 3"></div>
+        <div class="slide"><img src="moze.jpg" alt="Slide 3"></div>
+         <div class="slide"><img src="niki ija.jpg" alt="Slide 3"></div>
+          <div class="slide"><img src="kuca.jpg" alt="Slide 3"></div>
+           <div class="slide"><img src="ja.jpg" alt="Slide 3"></div>
+            <div class="slide"><img src="mesec.jpg" alt="Slide 3"></div>
+             <div class="slide"><img src="voz.jpg" alt="Slide 3"></div>
+             <div class="slide"><img src="mi.jpg" alt="Slide 3"></div>
+             <div class="slide"><img src="hrana.jpg" alt="Slide 3"></div>
+
+
+             
+    </div>
+    
+
+
+    <div class="popup-sticker" id="sticker1">
+        <span class="close-btn" onclick="closePopup('sticker1')">&times;</span>
+        <img src="pijavica.png" alt="Popup Sticker 1">
+
+    </div>
+
+
+    <div class="popup-sticker" id="sticker2">
+        <span class="close-btn" onclick="closePopup('sticker2')">&times;</span>
+        <img src="sticker2.png" alt="Popup Sticker 2">
+    </div>
+    
+
+    <!-- Dodajte više popup stikera po potrebi -->
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const stickers = document.querySelectorAll('.popup-sticker');
+
+        function showSlides() {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = 'none';
+            }
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].style.display = 'block';
+            setTimeout(showSlides, 2000); // Promena svakih 3 sekunde
+        }
+
+        function openPopup(stickerId) {
+            const popupSticker = document.getElementById(stickerId);
+            popupSticker.style.display = 'block';
+        }
+
+        function closePopup(stickerId) {
+            const popupSticker = document.getElementById(stickerId);
+            popupSticker.style.display = 'none';
+        }
+
+        showSlides(); // Pokreće slide show
+    </script>
+    <style id="default-custom-cursor-style" class="">
+            html, body {
+                cursor: url(https://d2kq0urxkarztv.cloudfront.net/5d17475e84e3710d75db2cf6/upload-113130b6-ede6-4095-8e18-1b3cf7e6650a.png), auto;
+                cursor: -webkit-image-set(
+                    url(https://d2kq0urxkarztv.cloudfront.net/5d17475e84e3710d75db2cf6/upload-113130b6-ede6-4095-8e18-1b3cf7e6650a.png?w=64) 1x,
+                    url(https://d2kq0urxkarztv.cloudfront.net/5d17475e84e3710d75db2cf6/upload-113130b6-ede6-4095-8e18-1b3cf7e6650a.png) 2x
+                ), auto;
+            }
+        </style>
+        <style id="hover-custom-cursor-style" class="">
+            a.external-link,
+            a.maglink,
+            a.anchor-link,
+            .goback-link,
+            .mailchimp-link,
+            .share-link {
+                cursor: url(https://d2kq0urxkarztv.cloudfront.net/5d17475e84e3710d75db2cf6/upload-a365dda8-fc0b-4e4e-a25e-df058e2ef86e.png), pointer;
+                cursor: -webkit-image-set(
+                    url(https://d2kq0urxkarztv.cloudfront.net/5d17475e84e3710d75db2cf6/upload-a365dda8-fc0b-4e4e-a25e-df058e2ef86e.png?w=29) 1x,
+                    url(https://d2kq0urxkarztv.cloudfront.net/5d17475e84e3710d75db2cf6/upload-a365dda8-fc0b-4e4e-a25e-df058e2ef86e.png) 2x
+                ), pointer;
+            }
+
+            .common-hotspot .pin {
+                cursor: url(https://d2kq0urxkarztv.cloudfront.net/5d17475e84e3710d75db2cf6/upload-a365dda8-fc0b-4e4e-a25e-df058e2ef86e.png), pointer;
+                cursor: -webkit-image-set(
+                    url(https://d2kq0urxkarztv.cloudfront.net/5d17475e84e3710d75db2cf6/upload-a365dda8-fc0b-4e4e-a25e-df058e2ef86e.png?w=29) 1x,
+                    url(https://d2kq0urxkarztv.cloudfront.net/5d17475e84e3710d75db2cf6/upload-a365dda8-fc0b-4e4e-a25e-df058e2ef86e.png) 2x
+                ), pointer;
+            }
+
+            .common-form .button {
+                cursor: url(https://d2kq0urxkarztv.cloudfront.net/5d17475e84e3710d75db2cf6/upload-a365dda8-fc0b-4e4e-a25e-df058e2ef86e.png), pointer;
+                cursor: -webkit-image-set(
+                    url(https://d2kq0urxkarztv.cloudfront.net/5d17475e84e3710d75db2cf6/upload-a365dda8-fc0b-4e4e-a25e-df058e2ef86e.png?w=29) 1x,
+                    url(https://d2kq0urxkarztv.cloudfront.net/5d17475e84e3710d75db2cf6/upload-a365dda8-fc0b-4e4e-a25e-df058e2ef86e.png) 2x
+                ), pointer;
+            }
+
+            .common-slideshow .images .prev-picture-arrow-middle,
+            .common-slideshow .images .next-picture-arrow-middle,
+            .common-slideshow .thumbnails .thumb:not(.active) {
+                cursor: url(https://d2kq0urxkarztv.cloudfront.net/5d17475e84e3710d75db2cf6/upload-a365dda8-fc0b-4e4e-a25e-df058e2ef86e.png), pointer;
+                cursor: -webkit-image-set(
+                    url(https://d2kq0urxkarztv.cloudfront.net/5d17475e84e3710d75db2cf6/upload-a365dda8-fc0b-4e4e-a25e-df058e2ef86e.png?w=29) 1x,
+                    url(https://d2kq0urxkarztv.cloudfront.net/5d17475e84e3710d75db2cf6/upload-a365dda8-fc0b-4e4e-a25e-df058e2ef86e.png) 2x
+                ), pointer;
+            }
+
+            .rmwidget.e-com-cart-button {
+                cursor: url(https://d2kq0urxkarztv.cloudfront.net/5d17475e84e3710d75db2cf6/upload-a365dda8-fc0b-4e4e-a25e-df058e2ef86e.png), pointer;
+                cursor: -webkit-image-set(
+                    url(https://d2kq0urxkarztv.cloudfront.net/5d17475e84e3710d75db2cf6/upload-a365dda8-fc0b-4e4e-a25e-df058e2ef86e.png?w=29) 1x,
+                    url(https://d2kq0urxkarztv.cloudfront.net/5d17475e84e3710d75db2cf6/upload-a365dda8-fc0b-4e4e-a25e-df058e2ef86e.png) 2x
+                ), pointer;
+            }
+
+            .widget-add-to-cart .add-to-cart-wrap .add-to-cart-button.viewer-button {
+                cursor: url(https://d2kq0urxkarztv.cloudfront.net/5d17475e84e3710d75db2cf6/upload-a365dda8-fc0b-4e4e-a25e-df058e2ef86e.png), pointer;
+                cursor: -webkit-image-set(
+                    url(https://d2kq0urxkarztv.cloudfront.net/5d17475e84e3710d75db2cf6/upload-a365dda8-fc0b-4e4e-a25e-df058e2ef86e.png?w=29) 1x,
+                    url(https://d2kq0urxkarztv.cloudfront.net/5d17475e84e3710d75db2cf6/upload-a365dda8-fc0b-4e4e-a25e-df058e2ef86e.png) 2x
+                ), pointer;
+            }
+
+            #cart-sidebar .sidebar-btn,
+            #cart-sidebar .sidebar-icon-btn {
+                cursor: url(https://d2kq0urxkarztv.cloudfront.net/5d17475e84e3710d75db2cf6/upload-a365dda8-fc0b-4e4e-a25e-df058e2ef86e.png), pointer;
+                cursor: -webkit-image-set(
+                    url(https://d2kq0urxkarztv.cloudfront.net/5d17475e84e3710d75db2cf6/upload-a365dda8-fc0b-4e4e-a25e-df058e2ef86e.png?w=29) 1x,
+                    url(https://d2kq0urxkarztv.cloudfront.net/5d17475e84e3710d75db2cf6/upload-a365dda8-fc0b-4e4e-a25e-df058e2ef86e.png) 2x
+                ), pointer;
+            }
+        </style>
+</body>
+</html>
